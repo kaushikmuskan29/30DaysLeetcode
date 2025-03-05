@@ -1,0 +1,38 @@
+
+    for (int i = 0; i < nums.size(); i++) {
+        if (nums[i] != val) {
+            nums[k] = nums[i];
+            k++;
+        }
+    }
+    return k;
+}
+
+int main() {
+    int n, val;
+    cout << "Enter the number of elements: ";
+    cin >> n;
+
+    vector<int> nums(n);
+    cout << "Enter the elements: ";
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
+
+    cout << "Enter the value to remove: ";
+    cin >> val;
+
+    int k = removeElement(nums, val);
+
+    cout << "Updated array (size " << k << "): [";
+    for (int i = 0; i < k; i++) {
+        cout << nums[i];
+        if (i != k - 1) {
+            cout << ", ";
+        }
+    }
+    cout << "]" << endl;
+    
+
+    return 0;
+}
