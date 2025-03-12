@@ -1,0 +1,22 @@
+#include <iostream>
+#include <sstream>
+using namespace std;
+
+int lengthOfLastWord(string s) {
+    stringstream ss(s);
+    string word, lastWord;
+    while (ss >> word) {
+        lastWord = word;
+    }
+    return lastWord.length();
+}
+
+
+int main() {
+    cout << lengthOfLastWord("Hello World") << endl;  // Output: 5
+    cout << lengthOfLastWord("   fly me   to   the moon  ") << endl;  // Output: 4
+    cout << lengthOfLastWord("luffy is still joyboy") << endl;  // Output: 6
+    cout << lengthOfLastWord("a") << endl;  // Output: 1
+    cout << lengthOfLastWord(" ") << endl;  // Output: 0
+    return 0;
+}
