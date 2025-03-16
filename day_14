@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class Solution {
+    public:
+        int addDigits(int num) {
+            while(num >= 10){
+            int sum = 0;
+            while(num > 0){
+                int x = num % 10;
+                sum += x;
+                num /= 10;
+               
+            }
+             num = sum;
+            
+            }
+            return num;
+        }
+    };
+
+int main(){
+    int n;
+    cout << "Enter a number : ";
+    cin >> n;
+    cout << "Th total sum of digits in " << n << " is " << Solution().addDigits(n) << endl;
+    return 0;
+}
