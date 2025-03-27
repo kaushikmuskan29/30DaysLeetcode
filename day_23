@@ -1,0 +1,19 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+vector<double> convertTemperature(double celsius) {
+    return {celsius + 273.15, celsius * 9.0 / 5.0 + 32.0};
+}
+
+int main() {
+    double celsius;
+    cout << "Enter temperature in Celsius: ";
+    cin >> celsius;
+
+    vector<double> result = convertTemperature(celsius);
+    cout << "Kelvin: " << result[0] << ", Fahrenheit: " << result[1] << endl;
+
+    return 0;
+}
